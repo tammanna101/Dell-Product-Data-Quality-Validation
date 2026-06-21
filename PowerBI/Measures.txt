@@ -1,0 +1,26 @@
+Total Records =
+COUNTROWS(Product_Validation)
+
+Valid Records =
+CALCULATE(
+    COUNTROWS(Product_Validation),
+    Product_Validation[Validation_Status] = "Valid"
+)
+
+Missing Records =
+CALCULATE(
+    COUNTROWS(Product_Validation),
+    Product_Validation[Validation_Status] = "Missing"
+)
+
+Not Found Records =
+CALCULATE(
+    COUNTROWS(Product_Validation),
+    Product_Validation[Validation_Status] = "Not Found"
+)
+
+Validation Success % =
+DIVIDE(
+    [Valid Records],
+    [Total Records]
+)
