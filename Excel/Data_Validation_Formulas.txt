@@ -1,0 +1,15 @@
+Missing Check
+
+=IF(OR(F2="",F2="NA"),"Missing","Available")
+
+Validation Check
+
+=IF(F2=G2,"Valid","Mismatch")
+
+Success Percentage
+
+=COUNTIF(H:H,"Valid")/COUNTA(H:H)
+
+Not Found Check
+
+=IF(I2="Product not found","Not Found","Valid")
